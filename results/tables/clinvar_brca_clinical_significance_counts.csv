@@ -1,0 +1,15 @@
+ClinicalSignificance,count
+Pathogenic,18217
+Conflicting classifications of pathogenicity,17343
+Likely benign,15768
+Uncertain significance,13779
+-,4066
+Benign,3075
+Likely pathogenic,1447
+Pathogenic/Likely pathogenic,1199
+Benign/Likely benign,420
+not provided,145
+no classification for the single variant,6
+no classifications from unflagged records,2
+drug response,2
+VUS-high,2

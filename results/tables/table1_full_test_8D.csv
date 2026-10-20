@@ -1,0 +1,4 @@
+model,n,prevalence,auroc,auprc,brier,balanced_brier,bss,ece,calib_slope,calib_intercept
+S_structural,3271,0.5194,0.9028,0.9005,0.1218,0.1217,0.512,0.0175,0.9029,0.0282
+F_fused_AFgate,3271,0.5194,0.904,0.9018,0.1211,0.121,0.5148,0.0174,0.9088,0.0213
+F_fused_noAFgate,3271,0.5194,0.904,0.9018,0.1211,0.121,0.5148,0.0174,0.909,0.0213

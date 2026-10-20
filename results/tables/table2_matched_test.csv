@@ -1,0 +1,4 @@
+model,n,auroc,auprc,brier,ece
+S_structural,30,0.9938,0.9987,0.2057,0.3341
+F_fused(+AFgate),30,0.9877,0.9987,0.1089,0.1837
+F_fused(noAFgate),30,0.9753,0.9974,0.1092,0.1804

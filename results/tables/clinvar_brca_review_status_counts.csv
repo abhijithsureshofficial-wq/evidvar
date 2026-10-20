@@ -1,0 +1,10 @@
+ReviewStatus,count
+"criteria provided, single submitter",24298
+"criteria provided, conflicting classifications",17339
+reviewed by expert panel,15232
+"criteria provided, multiple submitters, no conflicts",12801
+-,4066
+no assertion criteria provided,1584
+no classification provided,143
+no classification for the single variant,6
+no classifications from unflagged records,2

@@ -1,0 +1,3 @@
+Metric,Value,Model_Type
+AUROC,0.6595722375233448,Structural_Baseline
+Accuracy,0.6343625802506878,Structural_Baseline
