@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "EvidVar: Evidence-Gated Bayesian Fusion of Literature and Genomic Annotations for BRCA1/BRCA2 Variant Interpretation"
+authors:
+  - family-names: "Your Name"
+    given-names: "Your First Name"
+version: 0.1.0
+date-released: 2026-10-20
+repository-code: "https://github.com/your-username/evidvar"
+abstract: >
+  EvidVar is a reproducible NLP and probabilistic genetics pipeline for
+  interpreting BRCA1/BRCA2 germline variants by fusing structured genomic
+  annotations from ClinVar and Ensembl with sentence-level evidence mined
+  from PubMed literature.
+keywords:
+  - bioinformatics
+  - variant interpretation
+  - natural language processing
+  - ClinVar
+  - PubMed
+  - BRCA1
+  - BRCA2
+license: MIT
