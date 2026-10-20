@@ -1,0 +1,16 @@
+{
+    "total_initial_rows": 75471,
+    "high_quality_labeled": 19805,
+    "train_size": 11090,
+    "val_size": 4754,
+    "test_size": 3961,
+    "uncertainty_size": 15639,
+    "class_balance_train": {
+        "1.0": 5772,
+        "0.0": 5318
+    },
+    "class_balance_test": {
+        "1.0": 2062,
+        "0.0": 1899
+    }
+}
