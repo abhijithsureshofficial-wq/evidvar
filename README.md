@@ -1,5 +1,3 @@
-# EvidVar
-
 **EvidVar** is a reproducible NLP + probabilistic‑genetics pipeline that interprets
 BRCA1/BRCA2 germline variants by fusing structured genomic annotations (ClinVar,
 Ensembl) with sentence‑level evidence mined from biomedical literature (PubMed),
@@ -13,7 +11,7 @@ and by quantifying *uncertainty* rather than only predicting a label.
 > confidence, specificity, provenance and population frequency) so that sparse,
 > one‑sided literature never damages a strong structural baseline?
 
-## Headline result (honest framing)
+## Headline result
 
 Literature evidence is **sparse** (usable decided, non‑circular sentences exist for
 ~0.9% of high‑confidence variants: 149/16,355) and **one‑sided** (the zero‑shot
@@ -33,22 +31,8 @@ Full‑set performance: structural AUROC **0.903** (BSS **0.51**); fused AUROC *
 See `docs/results_summary.md` for every table and figure.
 
 ## Pipeline
-ClinVar variant_summary ──
-├─► normalize + label + quality filter ─► train/val/test splits
-Ensembl VEP (rsID) ─────── │
-▼
-structured features (consequence flags, SIFT, PolyPhen, AF)
-│
-PubMed BRCA abstracts ─► HGVS sentence mining ─► zero‑shot polarity (DeBERTa‑v3)
-│ + confidence + conflict + circularity
-▼
-per‑variant text aggregation (confidence/specificity‑weighted)
-│
-Bayesian log‑odds fusion = prior(structural)
-+ α · gated_text_LR
-▼
-calibrated P(pathogenic) + uncertainty + evidence explanation
 
+<img width="2720" height="1536" alt="1792552550c720" src="https://github.com/user-attachments/assets/891134c2-9960-4887-8946-d0c5e204625a" />
 
 ## Data sources (all public)
 
