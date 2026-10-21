@@ -39,17 +39,17 @@ Public databases change daily. To reproduce specific results, you must pin the d
 *   **Reproduction Strategy:** For exact replication, download the archive from a specific date (e.g., October 2026 snapshot) and place it in data/raw/. Update the script to skip downloading if the file exists.
 
 ### Ensembl Release
-*   **Current Behavior:** Queries the live REST API (rest.ensembl.org).
-*   **Reproduction Strategy:** The code uses a local JSON cache (data/interim/ensembl_cache.json).
-  *   Run the pipeline once to populate the cache.
-  *   Commit the cache file (or share it separately) to freeze the annotations.
-  *   Subsequent runs will load from cache, ensuring identical features regardless of Ensembl updates.
+*   **Current Behavior:** Queries the live REST API (`rest.ensembl.org`).
+*   **Reproduction Strategy:** The code uses a local JSON cache (`data/interim/ensembl_cache.json`).
+    *   Run the pipeline once to populate the cache.
+    *   Commit the cache file (or share it separately) to freeze the annotations.
+    *   Subsequent runs will load from cache, ensuring identical features regardless of Ensembl updates.
 
 ### PubMed Search
-*    **Current Behavior:** Fetches top 5,000 relevance-sorted abstracts.
-*    **Reproduction Strategy:** The search term and limit are hardcoded. However, PubMed indexing changes.
-   *   Save the resulting pubmed_abstracts.csv.gz immediately after generation.
-   *   Share this CSV to ensure downstream text mining operates on the exact same corpus.
+*   **Current Behavior:** Fetches top 5,000 relevance-sorted abstracts.
+*   **Reproduction Strategy:** The search term and limit are hardcoded. However, PubMed indexing changes.
+    *   Save the resulting `pubmed_abstracts.csv.gz` immediately after generation.
+    *   Share this CSV to ensure downstream text mining operates on the exact same corpus.
 
 ## 3. Step-by-Step Execution Order
 Run the cells in the Jupyter Notebook (01_Setup_and_ClinVar_Exploration.ipynb) in sequential order:
@@ -74,6 +74,7 @@ Variant Universe Size: Should be exactly 16,355 labeled variants.
 *   **Structural AUROC (Test Set):** Expected 0.9028 ± 0.0005.
 *   **Fused AUROC (Test Set):** Expected 0.9040 ± 0.0005.
 *   **Selected Alpha:** Must be 4.0 (based on balanced log-loss minimization).
+
 If these values deviate significantly (>0.01 difference in AUROC), investigate:
 *  Did you use the cached Ensembl data?
 *  Is the random seed set to 42 everywhere?
