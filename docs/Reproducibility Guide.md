@@ -14,6 +14,7 @@ Install the required packages using the provided `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
+ ```
 
 ###Key Versions Tested:
 Python: 3.10+
